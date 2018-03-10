@@ -51,6 +51,7 @@ def start_proxy(port, mode, flow_file_name):
     mitm_proxy_opts = options.Options()
     mitm_proxy_opts.keepserving = True
     mitm_proxy_opts.listen_port = port
+    mitm_proxy_opts.cadir = settings.CA_DIR
     if settings.UPSTREAM_PROXY:
         mitm_proxy_opts.mode = settings.UPSTREAM_PROXY_CONF
         mitm_proxy_opts.ssl_insecure = settings.UPSTREAM_PROXY_SSL_INSECURE

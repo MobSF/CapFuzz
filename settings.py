@@ -5,6 +5,7 @@ PORT = 1337
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 FLOWS_DIR = os.path.join(BASE_PATH, "flows")
 LOGS_DIR = os.path.join(BASE_PATH, "logs")
+CA_DIR = os.path.join(BASE_PATH, "ca")
 ## Code to create dirs needed
 DISPLAY_OUT = True
 # Upstream Proxy
