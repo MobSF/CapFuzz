@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><x type="yaml"><![CDATA[\n--- !ruby/object:Time {}\n\n]]></x>
+<?xml version="1.0" encoding="UTF-8"?><x type="yaml"><![CDATA[\n--- !ruby/object:\x00\n\n]]></x>
+--- !ruby/object:\x00
+LS0tICFydWJ5L
+O:{}
+\x00
