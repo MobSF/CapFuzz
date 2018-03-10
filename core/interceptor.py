@@ -26,9 +26,8 @@ class Interceptor:
         """
         Called when a client request has been received.
         """
-        if flow.request.url.endswith("Data"):
-            flow.request.content = flow.request.content.replace(b"480d510455000004060f0906505d0e0205575202150e0702550050540f0a0903570c51070c575607185e015402530455070e", b"1e09535200505402040d0702510f04560705520e4c0d0c510504510705080603500c025105030952150e0205520203555509")
-            flow.request.content = flow.request.content.replace(b"570c520d5a0a0702000f0104515c0f0c0652560701000b0b5b075555000b0c005a035f060e515409035f0d5c0156065d0902", b"1e09535200505402040d0702510f04560705520e4c0d0c510504510705080603500c025105030952150e0205520203555509")
+        pass
+
     def requestheaders(self, flow: http.HTTPFlow) -> None:
         """
         Called when the headers of a client request have been received,
@@ -47,19 +46,8 @@ class Interceptor:
         """
         Called when a server response has been received.
         """
-        if flow.request.url.endswith("Data") and b"1e09535200505402040d0702510f04560705520e4c0d0c510504510705080603500c025105030952150e0205520203555509" in flow.request.content:
-            print (flow.response.content)
-        #if "cookie" in flow.request.headers:
-        #    print ("cocokie " + flow.request.headers["cookie"])
-        #if "server" in flow.response.headers:
-            #print ("server " + flow.response.headers["server"])
-        #if "x-powered-by" in flow.response.headers:
-            #print ("x-powered-by: " + flow.response.headers["x-powered-by"])
-
-        #print("\n\n")
-        #print (flow.response.headers)
-        #from fuzzer.plugins.utils.helper import (get_os_server)
-        #print ("OS and APP: " + str(get_os_server(flow)))
+        if b"<!DOCTYPE html>" in flow.response.content:
+            flow.response.content = b"<svg onload=alert('Injected')>" + flow.response.content 
         pass
 
     def error(self, flow: http.HTTPFlow) -> None:
