@@ -1,6 +1,9 @@
 # CapFuzz
 ## capture | intercept | fuzz
-CapFuzz is built on top of [mitmproxy](https://mitmproxy.org/)
+Yet another https proxy to capture and fuzz web apis. Tailor made for fuzzing Mobile App APIs & web services with a scriptable interface. CapFuzz is built on top of [mitmproxy](https://mitmproxy.org/)
+
+<img width="1261" alt="screen shot 2018-03-11 at 2 57 55 pm" src="https://user-images.githubusercontent.com/4301109/37251800-af620840-253c-11e8-89ed-ce3594e243e9.png">
+
 ### Usage
 
 ```
