@@ -100,9 +100,6 @@ class CapFuzz:
         fuzz_options["write"] = ScanProgress.write
         run_fuzzer(fuzz_options)
 
-    def get_ca_dir(self):
-        return self.mitm_proxy_opts.cadir
-
 
 def main():
 
