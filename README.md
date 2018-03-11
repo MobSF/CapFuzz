@@ -1,6 +1,6 @@
 # CapFuzz
 ## capture | intercept | fuzz
-
+CapFuzz is built on top of [mitmproxy](https://mitmproxy.org/)
 ### Usage
 
 ```
