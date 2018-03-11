@@ -34,4 +34,5 @@ optional arguments:
 ### Install
 
 `pip install capfuzz`
+
 You can type `capfuzz` to access from anywhere.
