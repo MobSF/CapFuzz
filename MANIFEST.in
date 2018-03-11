@@ -1,4 +1,5 @@
 recursive-include capfuzz *.txt
+recursive-include capfuzz/LICENSES *
 recursive-include capfuzz/ca *
 recursive-include capfuzz/web/assets *
 recursive-include capfuzz/fuzzer/plugins/deserialization/java_payloads *
