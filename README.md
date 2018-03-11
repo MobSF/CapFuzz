@@ -4,6 +4,10 @@
 ### Install
 `pip install capfuzz`
 
+## Root CA
+
+Install Root CA available under `capfuzz/ca` to browser or system.
+
 ### Usage
 
 ```
