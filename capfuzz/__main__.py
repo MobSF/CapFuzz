@@ -30,16 +30,16 @@ from capfuzz.web.controllers.fuzz_progress import ScanProgress
 from capfuzz.web.controllers.main_controller import Application
 import capfuzz.settings as settings
 
-APPSERVER = None
-WEBSERVER = None
 
 class CapFuzz:
     def __init__(self):
         self.kill = self.signal_handler
+        self.app_server = None
+        self.web_server = None
 
     def signal_handler(self, *args, **kwargs):
         try:
-            APPSERVER.shutdown()
+            self.app_server.shutdown()
         except:
             pass
         try:
@@ -61,12 +61,12 @@ class CapFuzz:
         if settings.UPSTREAM_PROXY:
             mitm_proxy_opts.mode = settings.UPSTREAM_PROXY_CONF
             mitm_proxy_opts.ssl_insecure = settings.UPSTREAM_PROXY_SSL_INSECURE
-        APPSERVER = ProxyHandler(mitm_proxy_opts, mode, flow_file_name)
-        APPSERVER.server = ProxyServer(ProxyConfig(mitm_proxy_opts))
+        self.app_server = ProxyHandler(mitm_proxy_opts, mode, flow_file_name)
+        self.app_server.server = ProxyServer(ProxyConfig(mitm_proxy_opts))
         # needed or not?
         # proxy_server.addons.trigger("configure", mitm_proxy_opts.keys())
         # proxy_server.addons.trigger("tick")
-        APPSERVER.run()
+        self.app_server.run()
 
 
     def run_fuzz_server(self, port):
@@ -75,8 +75,8 @@ class CapFuzz:
         Configure and Fuzz
         """
         print("Running Web GUI at *:%d" % port)
-        WEBSERVER = Application()
-        WEBSERVER.listen(port)
+        self.web_server = Application()
+        self.web_server.listen(port)
         tornado.ioloop.IOLoop.current().start()
 
     def run_fuzz_cmdline(self, mode, project):
