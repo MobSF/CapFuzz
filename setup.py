@@ -28,10 +28,10 @@ setup(
     url="http://pypi.python.org/pypi/capfuzz/",
 
     #
-    # license="LICENSE.txt",
+    license="LICENSE.txt",
     description="Capture Intercept and Fuzz",
 
-    # long_description=open("README.txt").read(),
+    long_description=open("README.md").read(),
 
     # Dependent packages (distributions)
     install_requires=[
