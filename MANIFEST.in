@@ -1,0 +1,11 @@
+recursive-include capfuzz *.txt
+recursive-include capfuzz/ca *
+recursive-include capfuzz/web/assets *
+recursive-include capfuzz/fuzzer/plugins/deserialization/java_payloads *
+recursive-include capfuzz/fuzzer/plugins/deserialization/php_payloads *
+recursive-include capfuzz/fuzzer/plugins/deserialization/python_payloads *
+recursive-include capfuzz/fuzzer/plugins/deserialization/ruby_payloads *
+recursive-include capfuzz/fuzzer/plugins/deserialization *.txt
+recursive-include capfuzz/fuzzer/plugins/path_traversal *.txt
+recursive-include capfuzz/fuzzer/plugins/xss *.txt
+recursive-include capfuzz/fuzzer/plugins/xxe *.txt
