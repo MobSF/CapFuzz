@@ -41,4 +41,4 @@ class Application(tornado.web.Application):
 class MainHandler(tornado.web.RequestHandler):
 
     def get(self):
-        self.write("ok")
+        self.write('<script>location.href="/dashboard";</script>')

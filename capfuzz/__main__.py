@@ -7,6 +7,7 @@ import signal
 import argparse
 import tornado.ioloop
 
+from argparse import RawTextHelpFormatter
 
 from mitmproxy import (
     options,
@@ -64,6 +65,7 @@ def start_proxy(port, mode, flow_file_name):
     # proxy_server.addons.trigger("tick")
     APPSERVER.run()
 
+
 def run_fuzz_server(port):
     """
     Start Fuzz Server
@@ -77,7 +79,7 @@ def run_fuzz_server(port):
 
 def main():
 
-    PARSER = argparse.ArgumentParser()
+    PARSER = argparse.ArgumentParser(formatter_class=RawTextHelpFormatter)
     PARSER.add_argument(
         "-m", "--mode", help="Supported modes\n1. capture: Capture requests.\n2. fuzz: Run Fuzzing Server.\n3. runfuzz: Fuzz on captured requests with default configuration.\n4. intercept: Intercept and tamper the flow in live.")
     PARSER.add_argument("-p", "--port", help="Proxy Port",
