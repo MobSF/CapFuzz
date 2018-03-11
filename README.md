@@ -4,6 +4,8 @@
 ### Usage
 
 ```
+$ git clone https://github.com/MobSF/CapFuzz.git
+$ cd CapFuzz
 $ python capfuzz
 usage: capfuzz [-h] [-m MODE] [-p PORT] [-n NAME]
 
@@ -32,3 +34,4 @@ optional arguments:
 ### Install
 
 `pip install capfuzz`
+You can type `capfuzz` to access from anywhere.
