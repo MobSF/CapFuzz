@@ -36,6 +36,7 @@ class CapFuzz:
         self.kill = self.signal_handler
         self.app_server = None
         self.web_server = None
+        self.iloop = tornado.ioloop.IOLoop()
 
     def signal_handler(self, *args, **kwargs):
         try:
@@ -43,7 +44,7 @@ class CapFuzz:
         except:
             pass
         try:
-            tornado.ioloop.IOLoop.instance().stop()
+            self.iloop.current().stop()
         except:
             pass
         sys.exit(0)
@@ -77,7 +78,7 @@ class CapFuzz:
         print("Running Web GUI at *:%d" % port)
         self.web_server = Application()
         self.web_server.listen(port)
-        tornado.ioloop.IOLoop.current().start()
+        self.iloop.current().start()
 
     def run_fuzz_cmdline(self, mode, project):
         if project:
