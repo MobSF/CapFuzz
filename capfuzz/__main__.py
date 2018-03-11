@@ -32,11 +32,13 @@ import capfuzz.settings as settings
 
 
 class CapFuzz:
+
     def __init__(self):
         self.kill = self.signal_handler
         self.app_server = None
         self.web_server = None
         self.iloop = tornado.ioloop.IOLoop()
+        self.mitm_proxy_opts = options.Options()
 
     def signal_handler(self, *args, **kwargs):
         try:
@@ -49,26 +51,21 @@ class CapFuzz:
             pass
         sys.exit(0)
 
-
     def start_proxy(self, port, mode, flow_file_name):
         """
         Start Proxy
         Capture / Intercept
         """
-        mitm_proxy_opts = options.Options()
-        mitm_proxy_opts.keepserving = True
-        mitm_proxy_opts.listen_port = port
-        mitm_proxy_opts.cadir = settings.CA_DIR
+        self.mitm_proxy_opts.keepserving = True
+        self.mitm_proxy_opts.listen_port = port
+        self.mitm_proxy_opts.cadir = settings.CA_DIR
         if settings.UPSTREAM_PROXY:
-            mitm_proxy_opts.mode = settings.UPSTREAM_PROXY_CONF
-            mitm_proxy_opts.ssl_insecure = settings.UPSTREAM_PROXY_SSL_INSECURE
-        self.app_server = ProxyHandler(mitm_proxy_opts, mode, flow_file_name)
-        self.app_server.server = ProxyServer(ProxyConfig(mitm_proxy_opts))
-        # needed or not?
-        # proxy_server.addons.trigger("configure", mitm_proxy_opts.keys())
-        # proxy_server.addons.trigger("tick")
+            self.mitm_proxy_opts.mode = settings.UPSTREAM_PROXY_CONF
+            self.mitm_proxy_opts.ssl_insecure = settings.UPSTREAM_PROXY_SSL_INSECURE
+        self.app_server = ProxyHandler(
+            self.mitm_proxy_opts, mode, flow_file_name)
+        self.app_server.server = ProxyServer(ProxyConfig(self.mitm_proxy_opts))
         self.app_server.run()
-
 
     def run_fuzz_server(self, port):
         """
@@ -84,7 +81,7 @@ class CapFuzz:
         if project:
             flow_file = get_flow_file(project)
             if not flow_file:
-                print ("[ERROR] Flow File not found")
+                print("[ERROR] Flow File not found")
                 return
         else:
             flow_file = get_flow_file("default")
@@ -102,6 +99,10 @@ class CapFuzz:
         fuzz_options["api_register"] = ""
         fuzz_options["write"] = ScanProgress.write
         run_fuzzer(fuzz_options)
+
+    def get_ca_dir(self):
+        return self.mitm_proxy_opts.cadir
+
 
 def main():
 
