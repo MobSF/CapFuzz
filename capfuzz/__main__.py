@@ -82,6 +82,9 @@ class CapFuzz:
     def run_fuzz_cmdline(self, mode, project):
         if project:
             flow_file = get_flow_file(project)
+            if not flow_file:
+                print ("[ERROR] Flow File not found")
+                return
         else:
             flow_file = get_flow_file("default")
         fuzz_options = {}
