@@ -1,17 +1,10 @@
 # CapFuzz
 ## capture | intercept | fuzz
 
-### Install
-`pip install capfuzz`
-
-## Root CA
-
-Install Root CA available under `capfuzz/ca` to browser or system.
-
 ### Usage
 
 ```
-$ capfuzz
+$ python capfuzz
 usage: capfuzz [-h] [-m MODE] [-p PORT] [-n NAME]
 
 optional arguments:
@@ -26,6 +19,16 @@ optional arguments:
 ```
 
 1. Capture - `capfuz -m capture`
+   * Starts HTTPS proxy at `1337` by default.
+   * Install Root CA available under `capfuzz/ca` to browser or system.
 2. Intercept - `capfuz -m intercept`
+   * To Fiddle with request and response in live.
+   * Use: `capfuzz/core/interceptor.py` (If you did pip install, the location will change)
 3. Fuzz UI - `capfuzz -m fuzz`
+   * Starts the Fuzzer Web UI for configuration and fuzzing: `https://0.0.0.0:1337`
 4. Fuzz - `capfuzz -m runfuzz`
+   * Fuzz from command line.
+
+### Install
+
+`pip install capfuzz`
