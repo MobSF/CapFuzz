@@ -34,13 +34,12 @@ import capfuzz.settings as settings
 class CapFuzz:
 
     def __init__(self):
-        self.kill = self.signal_handler
         self.app_server = None
         self.web_server = None
         self.iloop = tornado.ioloop.IOLoop()
         self.mitm_proxy_opts = options.Options()
 
-    def signal_handler(self, *args, **kwargs):
+    def stop_capfuzz(self, *args, **kwargs):
         try:
             self.app_server.shutdown()
         except:
@@ -114,8 +113,8 @@ def main():
     if ARGS.mode:
         try:
             capfuzz = CapFuzz()
-            signal.signal(signal.SIGTERM, capfuzz.signal_handler)
-            signal.signal(signal.SIGINT, capfuzz.signal_handler)
+            signal.signal(signal.SIGTERM, capfuzz.stop_capfuzz)
+            signal.signal(signal.SIGINT, capfuzz.stop_capfuzz)
             create_dir([settings.FLOWS_DIR, settings.LOGS_DIR])
             if ARGS.mode == "capture" or ARGS.mode == "intercept":
                 capfuzz.start_proxy(ARGS.port, ARGS.mode, ARGS.name)
