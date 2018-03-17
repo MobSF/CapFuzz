@@ -44,7 +44,6 @@ class CapFuzz:
         except:
             pass
         try:
-            self.iloop.add_callback(tornado.ioloop.stop)
             self.iloop.current().stop()
         except:
             pass
