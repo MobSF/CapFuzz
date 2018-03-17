@@ -45,7 +45,7 @@ class CapFuzz:
         except:
             pass
         try:
-            self.iloop.add_callback(stop_capfuzz)
+            self.iloop.add_callback(self.ioloop.stop)
             self.iloop.current().stop()
         except:
             pass
