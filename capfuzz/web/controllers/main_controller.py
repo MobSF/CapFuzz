@@ -52,4 +52,3 @@ class KillHandler(tornado.web.RequestHandler):
     def get(self):
         tornado.ioloop.IOLoop().add_callback(tornado.ioloop.IOLoop().stop)
         tornado.ioloop.IOLoop().current().stop()
-        sys.exit(0)
