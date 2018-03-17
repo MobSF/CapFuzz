@@ -82,11 +82,19 @@ class Capture:
         if self.http_f:
             self.http_f.close()
 
+    def request(self, flow: http.HTTPFlow) -> None:
+        """Kill Proxy on Kll Request"""
+        for key, val in flow.request.headers.items():
+            if "capfuzz" in key and val == "kill":
+                print("[INFO] CapFuzz recieved Kill Request!")
+                sys.exit(0)
+
     def response(self, flow: http.HTTPFlow) -> None:
         if self.w:
             self.w.add(flow)
         if self.http_f:
             self.save_http(flow)
+
 """
     def websocket_handshake(self, flow: websocket.WebSocketFlow) -> None:
 
