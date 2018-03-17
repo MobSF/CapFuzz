@@ -30,7 +30,6 @@ from capfuzz.web.controllers.fuzz_progress import ScanProgress
 from capfuzz.web.controllers.main_controller import Application
 import capfuzz.settings as settings
 
-
 class CapFuzz:
 
     def __init__(self):

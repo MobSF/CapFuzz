@@ -18,6 +18,7 @@ from capfuzz.web.controllers.fuzz_progress import (
 
 import capfuzz.settings as settings
 
+
 class Application(tornado.web.Application):
 
     def __init__(self):
@@ -29,6 +30,7 @@ class Application(tornado.web.Application):
             (r"/start_fuzz", FuzzHandler),
             (r"/progress", ScanProgress),
             (r"/report/(.*)", FuzzReportHandler),
+            (r"/kill", KillHandler),
         ]
         app_settings = {
             "template_path": os.path.join(settings.BASE_PATH, "web/assets/templates/"),
@@ -42,3 +44,9 @@ class MainHandler(tornado.web.RequestHandler):
 
     def get(self):
         self.write('<script>location.href="/dashboard";</script>')
+
+
+class KillHandler(tornado.web.RequestHandler):
+
+    def get(self):
+        tornado.ioloop.IOLoop().current().stop()
