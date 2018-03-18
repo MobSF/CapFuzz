@@ -4,12 +4,17 @@ Yet another https proxy to capture and fuzz web apis. Tailor made for fuzzing Mo
 
 <img width="1261" alt="screen shot 2018-03-11 at 2 57 55 pm" src="https://user-images.githubusercontent.com/4301109/37251800-af620840-253c-11e8-89ed-ce3594e243e9.png">
 
-### Usage
-
+### Install
 ```
 $ git clone https://github.com/MobSF/CapFuzz.git
 $ cd CapFuzz
-$ python capfuzz
+$ python setup.py install
+```
+
+### Usage
+
+```
+$ capfuzz
 usage: capfuzz [-h] [-m MODE] [-p PORT] [-n NAME]
 
 optional arguments:
@@ -25,17 +30,12 @@ optional arguments:
 
 1. Capture - `capfuz -m capture`
    * Starts HTTPS proxy at `1337` by default.
-   * Install Root CA available under `capfuzz/ca` to browser or system.
+   * Install Root CA cert available under `capfuzz/ca` to browser or system.
 2. Intercept - `capfuz -m intercept`
    * To Fiddle with request and response in live.
-   * Use: `capfuzz/core/interceptor.py` (If you did pip install, the location will change)
+   * Use: `capfuzz/core/interceptor.py` (The location will be relative to where capfuzz is installed)
 3. Fuzz UI - `capfuzz -m fuzz`
    * Starts the Fuzzer Web UI for configuration and fuzzing: `https://0.0.0.0:1337`
 4. Fuzz - `capfuzz -m runfuzz`
    * Fuzz from command line.
 
-### Install
-
-`pip install capfuzz`
-
-You can type `capfuzz` to access from anywhere.
