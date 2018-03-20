@@ -31,7 +31,7 @@ class HTTPDumper:
         for key, val in req.headers.items():
             self.dump("%s: %s" % (key, val))
         if req.content:
-            self.dump("\n\n%s" % (req.content.decode("utf-8", "ignore")))
+            self.dump("\n\n%s" % (req.content))
 
         self.dump("=========")
         self.dump("RESPONSE")
@@ -40,7 +40,7 @@ class HTTPDumper:
         for key, val in res.headers.items():
             self.dump("%s: %s" % (key, val))
         if res.content:
-            self.dump("\n\n%s" % (res.content.decode("utf-8", "ignore")))
+            self.dump("\n\n%s" % (res.content))
 
 
 def get_flow_file(flow_name, write=False):
