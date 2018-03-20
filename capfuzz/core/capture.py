@@ -63,7 +63,7 @@ class Capture:
             self.http_f.write("%s: %s\n" % (key, val))
         if req.content:
             self.http_f.write("\n\n%s\n" %
-                              (req.content.decode("utf-8", "ignore")))
+                              (req.content))
 
         self.http_f.write("=========\n")
         self.http_f.write("RESPONSE\n")
@@ -74,7 +74,7 @@ class Capture:
             self.http_f.write("%s: %s\n" % (key, val))
         if res.content:
             self.http_f.write("\n\n%s\n" %
-                              (res.content.decode("utf-8", "ignore")))
+                              (res.content))
 
     def done(self):
         if self.f:
