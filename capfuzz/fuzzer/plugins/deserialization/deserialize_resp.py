@@ -15,10 +15,10 @@ from capfuzz.fuzzer.plugins.utils.oob_validator import (
 )
 
 
-def error_rep(flow, lang, write):
+def error_rep(flow, lang, write, report_file):
     write("\n[VULN] Possible Deserialization Vulnerability via Error Response in %s - %s" %
                  (flow.request.url, lang), type="danger")
-    http_dumper = HTTPDumper(options["report_file"], False)
+    http_dumper = HTTPDumper(report_file, False)
     http_dumper.dump(
         "========================================================================")
     http_dumper.dump(
@@ -33,15 +33,16 @@ def response_analyzer(flow, options):
     res = flow.response
     req = flow.request
     write = options["write"]
+    rep_file = options["report_file"]
     # Error Based
     if re.findall(b"pickle\.|<module>", res.content):
-        error_rep(flow, "Python", write)
+        error_rep(flow, "Python", write, rep_file)
     elif re.findall(b"incompatible marshal|`load'|control characters|`parse'", res.content):
-        error_rep(flow, "Ruby")
+        error_rep(flow, "Ruby", write, rep_file)
     elif re.findall(b"E_NOTICE", res.content):
-        error_rep(flow, "PHP", write)
+        error_rep(flow, "PHP", write, rep_file)
     elif re.findall(b"InvalidClassException|Exception in|at com\.", res.content):
-        error_rep(flow, "Java", write)
+        error_rep(flow, "Java", write, rep_file)
 
     # Response Based Validator
 
