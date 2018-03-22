@@ -55,7 +55,7 @@ class FuzzReportHandler(tornado.web.RequestHandler):
                 report = flip.read()
             context = {"title": "Fuzz Report",
                        "project": project,
-                       "report": report,
+                       "report": report.encode("utf-8", "ignore"),
                       }
             self.render("report.html", **context)
         except Exception as exp:
