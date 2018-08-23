@@ -1,0 +1,58 @@
+
+{%extends "_base.html" %}
+
+{% block contents %}
+<style>
+pre {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  overflow-y: hidden;
+  font-size: 12px;
+  line-height: 20px;
+  background: #171717;
+  border: 1px solid #777;
+  padding: 10px;
+}
+pre code {
+  padding: 10px;
+  color: #d0cfcf;
+}
+
+@media print {
+  pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap !important;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    background: #fff;
+  }
+}
+
+</style>
+<br>
+<h2 class="page-header"></h2>
+<div class="request_view">
+<div class="row">
+    <div class="col-md-12">
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">گزارش وب  - <strong>{{ project }}</strong></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+<pre><code>
+{{ report }}
+            </code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% end %}    
