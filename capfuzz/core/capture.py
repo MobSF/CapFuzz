@@ -53,7 +53,7 @@ class Capture:
     def save_http(self, flow):
         """Save Given Request and Response"""
         self.http_f.write("========\n")
-        self.http_f.write("REQUEST\n")
+        self.http_f.write("درخواست\n")
         self.http_f.write("========\n")
         req = flow.request
         res = flow.response
@@ -66,7 +66,7 @@ class Capture:
                               (req.content))
 
         self.http_f.write("=========\n")
-        self.http_f.write("RESPONSE\n")
+        self.http_f.write("پاسخ\n")
         self.http_f.write("=========\n")
         self.http_f.write("%s %s %s\n" %
                           (res.http_version, res.status_code, res.reason))

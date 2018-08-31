@@ -39,7 +39,7 @@ class DashboardHandler(tornado.web.RequestHandler):
             for file in os.listdir(flows_dir):
                 if file.endswith(".flows"):
                     projects.append(rreplace(file, ".flows", "", 1))
-            context = {"title": "Fuzz Dashboard",
+            context = {"title": "داشبورد ترافیک ها",
                        "project": project,
                        "projects": projects,
                        "exclude_matches": exclude_matches,
