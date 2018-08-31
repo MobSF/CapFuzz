@@ -54,27 +54,26 @@ textarea:focus {
 
 
 <!-- Content -->
-<h2 class="page-header"></h2>
 <div class="request_view">
 <div class="row">
     <div class="col-md-12">
           <div class="box box-solid">
-            <div class="box-header with-border">
-              <h3 class="box-title">تحلیل فازی <button type="button" class="btn btn-info btn-xs" onclick="show_projects()"> <span class="glyphicon glyphicon-list-alt"></span>  PROJECTS</button></h3>
-            </div>
+
             <!-- /.box-header -->
             <div class="box-body">
               <div class="btn-group">
-                <button type="button" class="btn btn-primary" onclick="scope_options()">Scan Scope</button>
-                <button type="button" class="btn btn-primary" onclick="fuzzers()">Active Fuzzers</button>
-                <button type="button" class="btn btn-primary" onclick="api_checks()">API Checks</button>
-                <button type="button" class="btn btn-success" onclick="start_fuzz()">Start!</button>
+                <button type="button" class="btn btn-info" style="margin-left: 5px"  onclick="show_projects()">پروژه ها</button>
+                <button type="button" class="btn btn-primary" style="margin-left: 5px" onclick="scope_options()">اسکن محدوده</button>
+                <button type="button" class="btn btn-primary"  style="margin-left: 5px" onclick="fuzzers()">Fuzzer های فعال</button>
+                <button type="button" class="btn btn-primary"  style="margin-left: 5px"  onclick="api_checks()">بررسی API</button>
+                <button type="button" class="btn btn-success"  style="margin-left: 5px" onclick="start_fuzz()">شروع!</button>
               </div>
             </div>
         </div>
     </div>
 </div>
 <div class="row">
+
   <div class="col-md-5">
           <div class="box box-solid">
             <div class="box-header with-border">
@@ -100,23 +99,22 @@ textarea:focus {
           </div>
           <!-- /.box -->
         </div>
-
-          <div class="col-md-7">
+ <div class="col-md-7">
           <div class="box box-solid">
             <div class="box-header with-border">
-              <h3 class="box-title">درخواست &amp; پاسخ</h3>
+              <h3 class="box-title">درخواست و پاسخ</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
                     <div id="req_res">
                       <h6 class="box-title">درخواست</h6>
                     <textarea class="form-control" rows="10" id="request">
-              
+
                     </textarea>
-                    
+
                       <h6 class="box-title">پاسخ</h6>
                     <textarea class="form-control" rows="10" id="response">
-                      
+
                     </textarea>
                     </div>
             </div>
@@ -124,6 +122,7 @@ textarea:focus {
           </div>
           <!-- /.box -->
         </div>
+
 </div>
 </div>
 
@@ -136,9 +135,9 @@ textarea:focus {
 
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">Scan Includes</a></li>
-              <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false">Scan Excludes</a></li>
-              <li class=""><a href="#tab_3" data-toggle="tab" aria-expanded="false">Exclude by default</a></li>
+              <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">اسکن اضافه شده ها</a></li>
+              <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false">اسکن خارج شده ها</a></li>
+              <li class=""><a href="#tab_3" data-toggle="tab" aria-expanded="false">به طور پیش فرض حذف شدها</a></li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane active" id="tab_1">
@@ -151,7 +150,7 @@ textarea:focus {
                         <table id="add_s" class="table table-striped">
                           <tbody><tr>
                             <th style="width: 10px">#</th>
-                            <th>Match</th>
+                            <th>همخوانی داشتن</th>
                             <th style="width: 40px">Remove</th>
                           </tr>
                         </tbody></table>
@@ -169,7 +168,7 @@ textarea:focus {
                           <table id="exc_s" class="table table-striped">
                             <tbody><tr>
                               <th style="width: 10px">#</th>
-                              <th>Match</th>
+                              <th>همخوانی داشتن</th>
                               <th style="width: 40px">Remove</th>
                             </tr>
                           </tbody></table>
@@ -188,7 +187,7 @@ textarea:focus {
                             <tbody><tr>
                               <th>
                               <div class="checkbox">
-                                <label><input id="exclude_url_match" type="checkbox" checked="checked"><strong>Excluded URL Matches</strong></label>
+                                <label><input id="exclude_url_match" type="checkbox" checked="checked"><strong>خارج کردن url های تطبیق دار</strong></label>
                               </div>
                               </th>
                             </tr>
@@ -202,7 +201,7 @@ textarea:focus {
                             <tr>
                               <th>
                               <div class="checkbox">
-                                <label><input id="exclude_extensions" type="checkbox" checked="checked"><strong>Excluded Extensions</strong></label>
+                                <label><input id="exclude_extensions" type="checkbox" checked="checked"><strong>خارج کردن افزون ها</strong></label>
                               </div>
                               </th>
                             </tr>
@@ -216,7 +215,7 @@ textarea:focus {
                             <tr>
                               <th>
                               <div class="checkbox">
-                                <label><input id="exclude_response_code" type="checkbox" checked="checked"><strong>Excluded Responses</strong></label>
+                                <label><input id="exclude_response_code" type="checkbox" checked="checked"><strong>خارج کردن پاسخ ها</strong></label>
                               </div>
                               </th>
                             </tr>
@@ -252,7 +251,7 @@ textarea:focus {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Active Fuzzers</h4>
+        <h4 class="modal-title">Fuzzerهای فعال</h4>
       </div>
       <div class="modal-body">
           <div class="box-body no-padding">
@@ -282,14 +281,14 @@ textarea:focus {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">API Checks</h4>
+        <h4 class="modal-title">API بررسی</h4>
       </div>
       <div class="modal-body">
           <div class="box-body no-padding">
            <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#api1" data-toggle="tab" aria-expanded="true">APIs</a></li>
-              <li class=""><a href="#api2" data-toggle="tab" aria-expanded="false">IDOR Checks</a></li>
+              <li class="active"><a href="#api1" data-toggle="tab" aria-expanded="true">APIها</a></li>
+              <li class=""><a href="#api2" data-toggle="tab" aria-expanded="false">IDOR بررسی</a></li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane active" id="api1">
@@ -304,20 +303,20 @@ textarea:focus {
                           <tr>
                             <th>API</th>
                             <th>URL</th>
-                            <th>Remove</th>
+                            <th>حذف</th>
                           </tr>
                           <tr>
-                            <td>Login API</td>
+                            <td>ورود API</td>
                             <td><p id="api_login"></p></td>
                             <td><button type="button" class="btn btn-danger btn-xs" onclick="remove_api('api_login')">x</button> </td>
                           </tr>
                            <tr>
-                            <td>Login PIN API</td>
+                            <td>ورود PIN API</td>
                             <td><p id="api_pin"></p></td>
                             <td><button type="button" class="btn btn-danger btn-xs" onclick="remove_api('api_pin')">x</button> </td>
                           </tr>
                           <tr>
-                            <td>Register API</td>
+                            <td>ثبت API</td>
                             <td><p id="api_register"></p></td>
                             <td><button type="button" class="btn btn-danger btn-xs" onclick="remove_api('api_register')">x</button> </td>
                           </tr>
@@ -365,7 +364,7 @@ textarea:focus {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Projects</h4>
+        <h4 class="modal-title">پروژها</h4>
       </div>
       <div class="modal-body">
           <!-- /.box-header -->
@@ -377,7 +376,7 @@ textarea:focus {
              </select>
              <div class="modal-footer">
                <div class="col-md-12 text-center"> 
-               <button type="button" class="btn btn-info" onclick="load_project()">Load Project</button>
+               <button type="button" class="btn btn-info" onclick="load_project()">بارگذاری پروژه</button>
              </div>
             </div>
           </div>
@@ -394,7 +393,7 @@ textarea:focus {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Fuzzer Progress</h4>
+        <h4 class="modal-title">پیش رفتن Fuzzer</h4>
       </div>
       <div class="modal-body">
           <!-- /.box-header -->

@@ -62,7 +62,7 @@ select { width: 100%; height:100%; }
 <div class="col-md-6" style="{{v}}">
           <div class="box box-solid">
             <div class="box-header with-border">
-              <h3 class="box-title">Configure URL Options</h3>
+              <h3 class="box-title">کانفیگ تنظبمات url</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -80,7 +80,7 @@ select { width: 100%; height:100%; }
                   </div>
                   <div id="collapse{{ forloop.counter0 }}" class="panel-collapse collapse in" aria-expanded="true">
                     <div class="box-body">
-                        <label for="login-{{key}}">Login API</label>
+                        <label for="login-{{key}}">ورود API</label>
                         <select name="login-{{key}}">
                           <option value="none">None</option>
                         {% for url in urls %}
@@ -88,7 +88,7 @@ select { width: 100%; height:100%; }
                          {% endfor %}
                         </select>
 
-                        <label for="pin-{{key}}">Login PIN API</label>
+                        <label for="pin-{{key}}">ورود PIN API</label>
                         <select name="pin-{{key}}">
                           <option value="none">None</option>
                         {% for url in urls %}
@@ -96,7 +96,7 @@ select { width: 100%; height:100%; }
                          {% endfor %}
                         </select>
 
-                         <label for="logout-{{key}}">Logout API</label>
+                         <label for="logout-{{key}}">خروجAPI</label>
                         <select name="logout-{{key}}">
                           <option value="none">None</option>
                         {% for url in urls %}
@@ -104,7 +104,7 @@ select { width: 100%; height:100%; }
                          {% endfor %}
                         </select>
 
-                        <label for="register-{{key}}">Register API</label>
+                        <label for="register-{{key}}">ثبت API</label>
                         <select name="register-{{key}}">
                           <option value="none">None</option>
                         {% for url in urls %}
@@ -129,7 +129,7 @@ select { width: 100%; height:100%; }
 <div class="col-md-6" style="{{v}}">
           <div class="box box-solid">
             <div class="box-header with-border">
-              <h3 class="box-title">Choose Scan Mode</h3>
+              <h3 class="box-title">انتخاب حالت اسکن</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -142,12 +142,12 @@ select { width: 100%; height:100%; }
                          name = "scanmode"
                          value = "basic"
                          checked = "checked" />
-                  <label for = "basic">Basic Checks</label>
+                  <label for = "basic">بررسی پایه ای</label>
                   
                   <input type = "radio"
                          name = "scanmode"
                          value = "all" />
-                  <label for = "all">All Checks</label>
+                  <label for = "all">تمام بررسی ها</label>
          
                   </div>
 

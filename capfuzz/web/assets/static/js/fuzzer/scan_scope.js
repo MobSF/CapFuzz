@@ -6,13 +6,13 @@ function add_inc_scope(value) {
     if (data.indexOf(value) === -1) {
       data.push(value);
       storage.setItem("scope", JSON.stringify(data));
-      $.growl({ title: "Scope", message: "Added to Scope!", style: "notice"});
+      $.growl({ title: "Scope", message: "اضافه کردن به محدوده!", style: "notice"});
     }
   } else {
     var new_data = [];
     new_data.push(value);
     storage.setItem("scope", JSON.stringify(new_data));
-    $.growl({ title: "Scope", message: "Added to Scope!", style: "notice"});
+    $.growl({ title: "Scope", message: "اضافه کردن به محدوده!", style: "notice"});
   }
 }
 function remove_inc_scope(value) {
@@ -23,7 +23,7 @@ function remove_inc_scope(value) {
     if (data.indexOf(value) !== -1) {
        data = data.filter(e => e !== value);
       storage.setItem("scope", JSON.stringify(data));
-      $.growl({ title: "Scope", message: "Removed from Scope!", style: "error"});
+      $.growl({ title: "Scope", message: "حذف از محدوده!", style: "error"});
     }
   }
 }
@@ -34,7 +34,7 @@ function remove_from_inc_model(iden){
   $(iden).parents('tr').remove();
   if ($('#add_s tr').length === 1) {
      $('#add_s').hide();
-     $('#sp_txt').text("Everything is in Scope.");  
+     $('#sp_txt').text("همه چیز در حوزه است.");
   }
 }
 
@@ -46,13 +46,13 @@ function exclude_scope (value){
     if (data.indexOf(value) === -1) {
       data.push(value);
       storage.setItem("exclude_scope", JSON.stringify(data));
-      $.growl({ title: "Scope", message: "Excluded from Scope!", style: "warning"});
+      $.growl({ title: "Scope", message: "خارج کردن از محدوده!", style: "warning"});
     }
   } else {
     var new_data = [];
     new_data.push(value);
     storage.setItem("exclude_scope", JSON.stringify(new_data));
-    $.growl({ title: "Scope", message: "Excluded from Scope!", style: "warning"});
+    $.growl({ title: "Scope", message: "خارج کردن از محدوده!", style: "warning"});
   }
 }
 
@@ -64,7 +64,7 @@ function remove_exc_scope(value) {
     if (data.indexOf(value) !== -1) {
        data = data.filter(e => e !== value);
       storage.setItem("exclude_scope", JSON.stringify(data));
-      $.growl({ title: "Scope", message: "Removed from Excluded Scope!", style: "error"});
+      $.growl({ title: "Scope", message: "حذف کردن محدوده های خارج شده!", style: "error"});
     }
   }
 }
@@ -92,7 +92,7 @@ function scope_options() {
       } 
     } else {
          $('#add_s').hide();
-         $('#sp_txt').text("Everything is in Scope.");  
+         $('#sp_txt').text("همه چیز در حوزه است.");
     }
 
     //Excluded from Scope

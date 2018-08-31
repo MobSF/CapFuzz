@@ -54,31 +54,30 @@ textarea:focus {
 
 
 <!-- Content -->
-<h2 class="page-header"></h2>
 <div class="request_view">
 <div class="row">
     <div class="col-md-12">
           <div class="box box-solid">
-            <div class="box-header with-border">
-              <h3 class="box-title">داشبورد FUZZER <button type="button" class="btn btn-info btn-xs" onclick="show_projects()"> <span class="glyphicon glyphicon-list-alt"></span>  پروژه ها</button></h3>
-            </div>
+
             <!-- /.box-header -->
             <div class="box-body">
               <div class="btn-group">
-                <button type="button" class="btn btn-primary" onclick="scope_options()">اسکن محدوده</button>
-                <button type="button" class="btn btn-primary" onclick="fuzzers()">Fuzzer های فعال</button>
-                <button type="button" class="btn btn-primary" onclick="api_checks()">بررسی API</button>
-                <button type="button" class="btn btn-success" onclick="start_fuzz()">شروع!</button>
+                <button type="button" class="btn btn-info" style="margin-left: 5px"  onclick="show_projects()">پروژه ها</button>
+                <button type="button" class="btn btn-primary" style="margin-left: 5px" onclick="scope_options()">اسکن محدوده</button>
+                <button type="button" class="btn btn-primary"  style="margin-left: 5px" onclick="fuzzers()">Fuzzer های فعال</button>
+                <button type="button" class="btn btn-primary"  style="margin-left: 5px"  onclick="api_checks()">بررسی API</button>
+                <button type="button" class="btn btn-success"  style="margin-left: 5px" onclick="start_fuzz()">شروع!</button>
               </div>
             </div>
         </div>
     </div>
 </div>
 <div class="row">
+
   <div class="col-md-5">
           <div class="box box-solid">
             <div class="box-header with-border">
-              <h3 class="box-title">گرفتن ترافیک</h3>
+              <h3 class="box-title">لیست ترافیک ها</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -90,18 +89,17 @@ textarea:focus {
                       <ul>
                         <li data-jstree='{"icon":"  glyphicon glyphicon-file"}' id="{{ flw['id']}}" data-url="{{flw['url']}}">{{flw['method']}} {{flw['relative']}}</li>
                       </ul>
-                       {% end %} 
+                       {% end %}
                     </li>
                   </ul>
-                {% end %} 
+                {% end %}
                </div>
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
         </div>
-
-          <div class="col-md-7">
+ <div class="col-md-7">
           <div class="box box-solid">
             <div class="box-header with-border">
               <h3 class="box-title">درخواست و پاسخ</h3>
@@ -111,12 +109,12 @@ textarea:focus {
                     <div id="req_res">
                       <h6 class="box-title">درخواست</h6>
                     <textarea class="form-control" rows="10" id="request">
-              
+
                     </textarea>
-                    
+
                       <h6 class="box-title">پاسخ</h6>
                     <textarea class="form-control" rows="10" id="response">
-                      
+
                     </textarea>
                     </div>
             </div>
@@ -124,6 +122,7 @@ textarea:focus {
           </div>
           <!-- /.box -->
         </div>
+
 </div>
 </div>
 
