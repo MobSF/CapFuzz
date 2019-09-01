@@ -1,4 +1,4 @@
-# CapFuzz
+# CapFuzz (Depreciated, use: https://github.com/MobSF/httptools) 
 ## capture | intercept | fuzz
 Yet another https proxy to capture and fuzz web apis. Tailor made for fuzzing Mobile App APIs & web services with a scriptable interface. CapFuzz is built on top of [mitmproxy](https://mitmproxy.org/)
 
